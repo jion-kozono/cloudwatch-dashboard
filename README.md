@@ -1,14 +1,12 @@
-# Welcome to your CDK TypeScript project
+## 概要
+CDKを使用してLambda関数のCloudWatch Dashboardを作成してみる検証
 
-This is a blank project for CDK development with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## 学んだこと
+- DashboardというリソースコンストラクタにWidgetを追加していくことでダッシュボードの作成が可能になる。
+  - Text Widget : ダッシュボードのタイトルを表示。
+  - Graph Widget : メトリックのグラフを表示。今回は以下のメトリクスを表示
+    - Invocations
+    - Errors
+  - LogQuery Widget : クエリを用いて、ログエントリを表示。今回は10個まで。
+### 参考
+- https://dev.classmethod.jp/articles/cloudwatch-dashboard-for-lambda-using-cdk/
